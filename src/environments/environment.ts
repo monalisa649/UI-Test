@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  //Api_key for access Harry Potter API
+  key:'$2a$10$wUKw54R0.lxF0Dx6qR0CVOse27HrHZjoq.2EEl.l0fUSOx3ZDcPem' 
 };
 
 /*
