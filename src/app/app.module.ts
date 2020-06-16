@@ -10,11 +10,13 @@ import { HousesComponent } from './components/houses/houses.component';
 //Services
 
 import { PotterService } from './services/potter.service';
+import { CharactersComponent } from './components/characters/characters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HousesComponent
+    HousesComponent,
+    CharactersComponent
   ],
   imports: [
     BrowserModule,
