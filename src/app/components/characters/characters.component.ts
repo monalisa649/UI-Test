@@ -14,17 +14,19 @@ import { CharacterInterface } from '../../models/characters.interface';
 export class CharactersComponent implements OnInit {
   public character: CharacterInterface;
   
+  
   constructor(private _potterService : PotterService) { }
 
+  filterCharacters = '';
+  
   ngOnInit(): void {
 
     this.getCharacters();
   }
 
   getCharacters(){
-  this._potterService.getCharacters().subscribe((characters: CharacterInterface)=>
-      
-  this.character = characters)
+  this._potterService.getCharacters()
+  .subscribe((characters: CharacterInterface)=>this.character = characters)
   
 
 error =>{

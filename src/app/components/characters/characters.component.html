@@ -1,4 +1,32 @@
-<div *ngFor="let character of character">
+<div class="container">
+    <h1>List characters</h1>
+    <div class="form">
+         <input type="text"  name="filterCharacters" placeholder="Search..." [(ngModel)]="filterCharacters">
+    </div>
+
+    <div class="table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>House</th>
+                    <th>BloodStatus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let character of character | filter:filterCharacters">
+                    <td>{{character.name}}</td>
+                    <td>{{character.house}}</td>
+                    <td>{{character.bloodStatus}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<!--<div *ngFor="let character of character">
     <p> {{character._id}} Este es el id </p>
     <p> {{character.name}} Este es el nombre</p>
     <p>{{character.house}} Esta es la casa</p>
@@ -6,5 +34,5 @@
  
  
     
- </div>
+ </div>-->
  
