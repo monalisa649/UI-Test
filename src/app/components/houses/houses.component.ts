@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { PotterService } from '../../services/potter.service';
 import { HouseInterface } from '../../models/house-interface';
 import { Router, ActivatedRoute} from '@angular/router';
+//models
+import { PotterService } from '../../services/potter.service';
+import { CharacterInterface } from '../../models/characters.interface';
+
 @Component({
   selector: 'app-houses',
   templateUrl: './houses.component.html',
@@ -9,7 +12,10 @@ import { Router, ActivatedRoute} from '@angular/router';
 })
 export class HousesComponent implements OnInit {
   public house : HouseInterface;
+  public character: CharacterInterface;
   public idHouse : string;
+  
+
 
   constructor(
     private _potterService : PotterService,
@@ -18,10 +24,13 @@ export class HousesComponent implements OnInit {
     ) { 
    
   }
+  filterCharacters = '';
   
   ngOnInit(): void {
 
     this.getHouses();
+
+    this.getCharacters();
   }
 
   getHouses(){
@@ -35,7 +44,18 @@ export class HousesComponent implements OnInit {
     
   }
 
+  getCharacters(){
+    this._potterService.getCharacters()
+    .subscribe((characters: CharacterInterface)=>this.character = characters)
+    
+  
+  error =>{
+    console.log(<any>error);
+  }
+  
+  }
+
   listCharacters(){
-    this.router.navigate(['/characters']);
+   
   }
 }

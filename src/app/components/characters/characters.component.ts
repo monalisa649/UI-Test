@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 //services
 import { PotterService } from '../../services/potter.service';
@@ -15,16 +15,17 @@ export class CharactersComponent implements OnInit {
   public character: CharacterInterface;
   
   
-  constructor(private _potterService : PotterService) { }
+  
+  constructor(/*private _potterService : PotterService*/) { }
 
-  filterCharacters = '';
+  //filterCharacters = '';
   
   ngOnInit(): void {
 
-    this.getCharacters();
+    /*this.getCharacters();*/
   }
 
-  getCharacters(){
+  /*getCharacters(){
   this._potterService.getCharacters()
   .subscribe((characters: CharacterInterface)=>this.character = characters)
   
@@ -33,6 +34,6 @@ error =>{
   console.log(<any>error);
 }
 
-}
+}*/
 
 }

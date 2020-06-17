@@ -1,8 +1,48 @@
-<div *ngFor="let house of house">
-   <p> {{house.name}} </p>
-   <p>{{house.members.length}}</p>
-   <button (click)="listCharacters()"></button>
+<header class="header">
+  <h1>Data Harry Potter</h1>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. necessitatibus? Saepe iure ducimus qui nemo minus eum
+    soluta doloribus temporibus quod adipisci culpa asperiores distinctio, veniam amet omnis earum illo?</p>
+</header>
+<div class="container">
 
+  <h1>ALL HOGWARTS HOUSES</h1>
 
-   
+  <div class="house-cards">
+    <div *ngFor="let house of house">
+      <img src="assets/img/pexels-photo.jpeg" alt="">
+      <h2> {{house.name}} </h2>
+      <h3>Members {{house.members.length}}</h3>
+    </div>
+  </div>
+
+  <h2>All CHARACTERS</h2>
+  <div class="form">
+    <input type="text" name="filterCharacters" placeholder="Search..." [(ngModel)]="filterCharacters">
+  </div>
+
+  <div class="table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Role</th>
+          <th>House</th>
+          <th>School</th>
+          <th>BloodStatus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let character of character | filter:filterCharacters">
+          <td>{{character.name}}</td>
+          <td>{{character.role}}</td>
+          <td>{{character.house}}</td>
+          <td>{{character.school}}</td>
+          <td>{{character.bloodStatus}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
+<footer>
+  <p>UI-Text make by Elizabeth Orrego &copy;</p>
+</footer>
