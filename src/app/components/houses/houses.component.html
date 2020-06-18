@@ -8,11 +8,14 @@
   <h1>ALL HOGWARTS HOUSES</h1>
 
   <div class="house-cards">
-    <div *ngFor="let house of house">
-      <img src="assets/img/pexels-photo.jpeg" alt="">
-      <h2> {{house.name}} </h2>
+    <div *ngFor="let i of imgHouse">
+        <img [src]="i.path">
+      </div>
+    <div *ngFor="let house of house">   
+       <h2> {{house.name}} </h2>
       <h3>Members {{house.members.length}}</h3>
     </div>
+    
   </div>
 
   <h2>All CHARACTERS</h2>

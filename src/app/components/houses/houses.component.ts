@@ -14,6 +14,7 @@ export class HousesComponent implements OnInit {
   public house : HouseInterface;
   public character: CharacterInterface;
   public idHouse : string;
+  public imgHouse: any [] =[];
   
 
 
@@ -23,6 +24,12 @@ export class HousesComponent implements OnInit {
     private router: Router
     ) { 
    
+      this.imgHouse = [
+        {path:"assets/img/pexels-photo.jpeg"},
+        {path:"assets/img/pexels-photo2.jpeg"},
+        {path:"assets/img/pexels-photo3.jpeg"},
+        {path:"assets/img/mont-saint.jpg"}
+      ];
   }
   filterCharacters = '';
   
