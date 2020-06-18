@@ -13,7 +13,6 @@ import { CharacterInterface } from '../../models/characters.interface';
 export class HousesComponent implements OnInit {
   public house : HouseInterface;
   public character: CharacterInterface;
-  public idHouse : string;
   public imgHouse: any [] =[];
   
 
@@ -23,7 +22,8 @@ export class HousesComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router
     ) { 
-   
+
+  //Array of images
       this.imgHouse = [
         {path:"assets/img/pexels-photo.jpeg"},
         {path:"assets/img/pexels-photo2.jpeg"},
@@ -31,12 +31,13 @@ export class HousesComponent implements OnInit {
         {path:"assets/img/mont-saint.jpg"}
       ];
   }
+  // Variable for filterpipe
   filterCharacters = '';
   
   ngOnInit(): void {
-
+//Method for subscribe
     this.getHouses();
-
+//Method for subscribe
     this.getCharacters();
   }
 
@@ -62,7 +63,5 @@ export class HousesComponent implements OnInit {
   
   }
 
-  listCharacters(){
-   
-  }
+  
 }
