@@ -17,13 +17,17 @@ import { PotterService } from './services/potter.service';
 
 //Pipe
 import { FilterPipe } from './pipes/filter.pipe';
+import { CharactersComponent } from './components/characters/characters.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HousesComponent,
-    FilterPipe
+    FilterPipe,
+    CharactersComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

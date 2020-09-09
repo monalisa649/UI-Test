@@ -26,11 +26,15 @@ export class PotterService {
   }
 
   getHouses(): Observable <any> {
-      return this._http.get(this.url+'/houses'+'?key='+this.key);
+      return this._http.get(`${this.url}/houses/?key=${this.key}`);
   }
 
   getCharacters(): Observable <any> {
-    return this._http.get(this.url+'/characters'+'?key='+this.key);
+    return this._http.get(`this.url/characters?key=${this.key}`);
+}
+
+getHouse(id): Observable <any> {
+  return this._http.get(`this.url/houses${id}?key=${this.key}`);
 }
 
 }

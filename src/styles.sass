@@ -24,14 +24,12 @@ body
     color: $colorFont1
     font-size: 16px
 
-.container 
-    width: 90%
-    margin: auto
 
-header
+
+/*header
   width: 100%
   height: 200px
-  background: url("assets/img/train-with-smoke.jpg") no-repeat center center/cover
+  //background: url("assets/img/train-with-smoke.jpg") no-repeat center center/cover
   display: flex
   flex-direction: column
   align-items: center
@@ -39,25 +37,50 @@ header
   justify-content: flex-end
   padding-bottom: $margin
   margin-bottom: $margin
-  color: $colorFont1
+  color: $colorFont1*/
 
 h1
+    text-align: left
+    color: $primary-color
+    line-height: 35px
+
+h2
+    color: #cccccc
     text-align: center
-    margin-bottom: $margin
 
 h3
     color: $primary-color
+    text-align: center
 
 //House cards
+
+
+.container
+    width: 90%
+    min-height: 400px
+    margin: 0px auto
+    margin-top: 80px
+   
+
 .house-cards
     display: grid
     grid-template-columns: repeat(4, 1fr)
     gap: $margin
     margin-bottom: $margin
+    border: 2px #cccccc
+    
     
     img
         width: 100%
-        height: 180px
+        height: 220px
+        margin-top: 40px
+        border-radius:  2px
+        box-shadow: 0px 0px 4px gray
+        &:hover
+            box-shadow: 2px 2px 4px  $primary-color
+            transition: all 300ms 
+            cursor: pointer
+            
 
 input
     display: block
