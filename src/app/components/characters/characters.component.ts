@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { PotterService } from '../../services/potter.service';
 
 @Component({
   selector: 'app-characters',
@@ -7,7 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharactersComponent implements OnInit {
 
-  constructor() { }
+  public id_house : any ={};
+
+  constructor(  public activR : ActivatedRoute,
+                public _poterService :PotterService) {
+
+    this.activR.params.subscribe(params =>{
+
+      console.log(params)
+
+  })
+
+  }
 
   ngOnInit(): void {
   }

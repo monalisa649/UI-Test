@@ -8,9 +8,9 @@ import { CharactersComponent } from './components/characters/characters.componen
 const routes: Routes = [
   {path: '', component: HousesComponent},
   {path:'houses', component: HousesComponent},
-  {path: 'characters', component: CharactersComponent},
+  {path: 'characters/:id', component: CharactersComponent},
   {path: '**', component: HousesComponent}
-  
+
 ];
 
 @NgModule({

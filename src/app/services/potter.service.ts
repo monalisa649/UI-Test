@@ -22,19 +22,20 @@ export class PotterService {
   ) {
     this.key = environment.apiKey;
     this.url = environment.apiUrl;
-    
+
   }
 
   getHouses(): Observable <any> {
       return this._http.get(`${this.url}/houses/?key=${this.key}`);
   }
 
-  getCharacters(): Observable <any> {
+  /*getCharacters(): Observable <any> {
     return this._http.get(`this.url/characters?key=${this.key}`);
-}
+}*/
 
-getHouse(id): Observable <any> {
+getHouse(id: string): Observable <any> {
   return this._http.get(`this.url/houses${id}?key=${this.key}`);
+  console.log('servicio gethouse');
 }
 
 }

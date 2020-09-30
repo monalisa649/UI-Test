@@ -14,14 +14,15 @@ export class HousesComponent implements OnInit {
   public house : HouseInterface;
   public character: CharacterInterface;
   public imgHouse: any [] =[];
-  
+  public houseId : any;
+
 
 
   constructor(
     private _potterService : PotterService,
     private route: ActivatedRoute,
     private router: Router
-    ) { 
+    ) {
 
   //Array of images
       this.imgHouse = [
@@ -33,35 +34,48 @@ export class HousesComponent implements OnInit {
   }
   // Variable for filterpipe
   filterCharacters = '';
-  
+
   ngOnInit(): void {
 //Method for subscribe
     this.getHouses();
 //Method for subscribe
-    this.getCharacters();
+ /*   this.getCharacters();
+ */
+
   }
 
   getHouses(){
-    this._potterService.getHouses().subscribe((houses: HouseInterface)=>
-      
-        this.house = houses
-        ) 
+    this._potterService.getHouses().subscribe((houses: HouseInterface)=>{
+
+      this.house = houses
+      //console.log(this.house)
+    })
+
         error =>{
         console.log(<any>error);
       }
-    
+
   }
 
-  getCharacters(){
+  verHouse(house: HouseInterface ){
+    this.houseId = house._id;
+    console.log(this.houseId);
+    this.router.navigate(['//characters', this.houseId]);
+
+
+  }
+
+
+ /* getCharacters(){
     this._potterService.getCharacters()
     .subscribe((characters: CharacterInterface)=>this.character = characters)
-    
-  
+
+
   error =>{
     console.log(<any>error);
   }
-  
-  }
 
-  
+  }*/
+
+
 }
