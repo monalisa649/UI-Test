@@ -1,0 +1,13 @@
+<div>
+  <h1>Aqui veremos al listado de personajes de cada casa</h1>
+</div>
+
+<app-search></app-search>
+
+<div *ngFor="let house of house; index as i" >
+<div *ngFor="let item of house.members; index as j">
+  <p>{{house.members[j].name}}</p></div>
+
+
+
+</div>

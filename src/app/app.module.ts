@@ -19,6 +19,8 @@ import { PotterService } from './services/potter.service';
 import { FilterPipe } from './pipes/filter.pipe';
 import { CharactersComponent } from './components/characters/characters.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { HouseComponent } from './components/house/house.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { MenuComponent } from './components/menu/menu.component';
     HousesComponent,
     FilterPipe,
     CharactersComponent,
-    MenuComponent
+    MenuComponent,
+    HouseComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { PotterService } from '../../services/potter.service';
+import { CharacterInterface } from '../../models/characters.interface';
+import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 
 @Component({
   selector: 'app-characters',
@@ -11,6 +13,7 @@ import { PotterService } from '../../services/potter.service';
 export class CharactersComponent implements OnInit {
 
   public id_house : any ={};
+  public character : any;
 
   constructor(  public activR : ActivatedRoute,
                 public _poterService :PotterService) {
@@ -24,6 +27,22 @@ export class CharactersComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //this.getCharacters();
   }
 
+  /*getCharacters(){
+    this._poterService.getCharacters()
+    .subscribe((data : any)=>{
+
+      this.character = data
+
+      console.log(this.character,'pagina character');
+    })
+
+
+  error =>{
+    console.log(<any>error);
+  }
+
+  }*/
 }

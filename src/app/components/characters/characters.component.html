@@ -1,6 +1,13 @@
 
-<dir>
+<div>
   <h1>Aqui veremos al listado de personajes de cada casa</h1>
-</dir>
+</div>
+
+<div *ngFor = "let data of character">
+ <p>{{data._id}}</p>
+ <hr>
+ <p>{{data.name}}</p>
+
+</div>
 
 

@@ -38,17 +38,17 @@ export class HousesComponent implements OnInit {
   ngOnInit(): void {
 //Method for subscribe
     this.getHouses();
-//Method for subscribe
- /*   this.getCharacters();
- */
+
 
   }
+
+
 
   getHouses(){
     this._potterService.getHouses().subscribe((houses: HouseInterface)=>{
 
       this.house = houses
-      //console.log(this.house)
+      console.log(this.house)
     })
 
         error =>{
@@ -57,25 +57,18 @@ export class HousesComponent implements OnInit {
 
   }
 
+
+
   verHouse(house: HouseInterface ){
     this.houseId = house._id;
     console.log(this.houseId);
-    this.router.navigate(['//characters', this.houseId]);
+    this.router.navigate(['/house', this.houseId]);
 
 
   }
 
 
- /* getCharacters(){
-    this._potterService.getCharacters()
-    .subscribe((characters: CharacterInterface)=>this.character = characters)
 
-
-  error =>{
-    console.log(<any>error);
-  }
-
-  }*/
 
 
 }
