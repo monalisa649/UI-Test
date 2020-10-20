@@ -1,13 +1,15 @@
-<div>
-  <h1>Aqui veremos al listado de personajes de cada casa</h1>
+
+
+<div class="form">
+  <div><input type="text" name="filterCharacters" placeholder="Search..." [(ngModel)]="filterCharacters">
+  <i class="fas fa-search" ></i>
+</div>
 </div>
 
-<app-search></app-search>
-
-<div *ngFor="let house of house; index as i" >
-<div *ngFor="let item of house.members; index as j">
-  <p>{{house.members[j].name}}</p></div>
-
+<div *ngFor="let house of house " >
+<div *ngFor="let item of house.members | filter:filterCharacters ">
+  <p>{{item.name }}</p>
+</div>
 
 
 </div>

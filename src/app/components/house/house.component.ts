@@ -27,7 +27,8 @@ export class HouseComponent implements OnInit {
 
      }
 
-
+// Variable for filterpipe
+ filterCharacters = '';
 
   ngOnInit(): void {
   }

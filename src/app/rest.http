@@ -5,3 +5,29 @@ https://www.potterapi.com/v1/houses/5a05da69d45bd0a…54R0.lxF0Dx6qR0CVOse27HrHZ
 
 ###
 https://www.potterapi.com/v1/houses/5a05da69d45bd0a11bd5e06f/?key=$2a$10$wUKw54R0.lxF0Dx6qR0CVOse27HrHZjoq.2EEl.l0fUSOx3ZDcPem
+
+###
+https://blitz-dev1.azurewebsites.net/ms-user/api/users/login
+
+###
+curl --location --request POST 'https://blitz-dev1.azurewebsites.net/msuser/api/users/login' \
+--header 'Content-Type: application/json' \
+--header 'x-application-id: c14ba89d-4e8a-4ffc-be9c-77e9a207914b' \
+--data-raw
+'{
+ "Email": "diego.suarez@gmail.com",
+ "Password": "diego"
+}'
+
+###
+POST https://blitz-dev1.azurewebsites.net/msuser/api/users/login
+content-type: application/json
+x-application-id: c14ba89d-4e8a-4ffc-be9c-77e9a207914b
+
+{
+  "Email": "diego.suarez@gmail.com",
+  "Password": "diego"
+}
+
+###
+GET https://blitz-dev1.azurewebsites.net/ms-ebill/api/product?page=1
