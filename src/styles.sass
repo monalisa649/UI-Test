@@ -14,25 +14,43 @@ $roboto-slab: 'Roboto Slab', serif
     box-sizing: border-box
     margin: 0px
     padding: 0px
-    background-color: #f1f1f1
+    background-color: #ffffff
     font-family: $roboto-slab
     color: $colorBase
     font-size: 16px
 
+.wraper
+
+    width:80%
+    height: 100%
+    margin: 0px auto
+    border: 1px solid #cccccc
+    box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.2)
+    padding: 30px
+
 
 h1
-    text-align: left
-    color: $primary-color
-    line-height: 50px
-    background: #873436
-    font-size: 30px
+  text-align: left
+  color: #cccccc
+  line-height: 50px
+  background: #873436
+  font-size: 30px
+  &:hover
+        color:$primary-color
+        transition: all 300ms
+        font-size: 33px
+
 
 h2
-    color: $colorBase
+    color: #873436
     text-align: center
+    font-size: 20px
+    margin-top: 10px
+
+
 
 h3
-    color: $primary-color
+    color: $colorBase
     text-align: center
 
 a
@@ -42,63 +60,77 @@ a
 //House cards
 
 
-.container
-    width: 90%
-    min-height: 400px
-    margin: 0px auto
-    margin-top: 80px
-
-
-.house-cards
+.house-cards-grid
     display: grid
     grid-template-columns: repeat(4, 1fr)
     gap: $margin
-    margin-bottom: $margin
-    border: 2px #cccccc
+
+
+
+
 
 
     img
-        width: 100%
+        width: 98%
         height: 220px
         margin-top: 40px
-        border-radius:  2px
-        box-shadow: 0px 0px 4px gray
-        &:hover
-            box-shadow: 2px 2px 4px  $primary-color
+        border-radius:  10px
+        box-shadow: 3px 3px 4px  $primary-color
+
+
+.target
+      width:98%
+      border: 1px solid #cccccc
+      border-radius: 10px
+      box-shadow: 0px 0px 4px gray
+      &:hover
+            box-shadow: 3px 3px 4px  $primary-color
             transition: all 300ms
-            cursor: pointer
+            width: 100%
+
+button
+      width: 100px
+      height:30px
+      align-height:30px
+      margin-top: 15px
+      margin-left: 66px
+      margin-bottom: 10px
+      color: #cccccc
+      border-bottom: 1px solid #008cba
+      border-radius: 10px
+      cursor: pointer
+      background: #008cba
+      &:hover
+            background: #006cba
+            color: white
+            transition: all 300ms
 
 
-input
-    display: block
-    width: 30%
-    height: 40px
+
+table
+    width: 60%
+    margin: 0px auto
     margin-top: 20px
-    margin-bottom: $margin
-    border-radius: 5px
-    padding: $margin
 
-.table
-    width: 100%
 
-    table
-        border:1px solid white
 
-        thead
-            height: 50px
-            background:$primary-color
-            text-align: center
+    thead
+        height: 50px
+        text-align: center
 
-        td
-            width: 15%
-            text-align: right
-            padding-right: $margin
-            border-bottom: 1px solid white
+
+    td
+
+      text-align: center
+      padding:5px
+
 
 footer
     width: 90%
-    margin: 0px auto
-    margin-top: 10px
+    margin-left: 0px
+    margin-top: 30px
+
+
 
 
 

@@ -1,66 +1,29 @@
-
-<div class="container">
-
+<div class="wraper">
   <h2>ALL HOGWARTS HOUSES</h2>
 
-  <div class="house-cards">
-    <!--Array of images created in component-->
+  <div class="house-cards-grid">
 
-    <div *ngFor="let i of imgHouse">
-      <img [src]="i.path">
-    </div>
-    <div  *ngFor="let house of house" class="punter">
-      <h2> {{house.name}} </h2>
-
-
-        <h3><a (click) = "verHouse( house )">Members {{house.members.length}}</a>
-      </h3>
-
-
+    <div *ngFor="let i of imgHouse" (click)="verHouse( house )">
+      <img [src]="i">
 
     </div>
 
+    <div class="target" *ngFor="let house of house; index as j">
+
+      <h2 class="subtitle"> {{house.name}} </h2>
 
 
+      <h3>{{house.members.length}} members</h3>
+
+      <button (click)="verHouse( house )">Ver +</button>
+
+
+    </div>
+  </div>
+  <div>
   </div>
 
-
-
-
-
-
-<!--
-  <h2>All CHARACTERS</h2>
-  <div class="form">
-    <input type="text" name="filterCharacters" placeholder="Search..." [(ngModel)]="filterCharacters">
-  </div>
-
-  <div class="table">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Role</th>
-          <th>House</th>
-          <th>School</th>
-          <th>BloodStatus</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let character of character | filter:filterCharacters">
-          <td>{{character.name}}</td>
-          <td>{{character.role}}</td>
-          <td>{{character.house}}</td>
-          <td>{{character.school}}</td>
-          <td>{{character.bloodStatus}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>-->
-
-<footer>
-  <p>UI-Text make by Elizabeth Orrego &copy;</p>
-</footer>
-
-
+  <footer>
+    <p>UI-Text make by Elizabeth Orrego &copy;</p>
+  </footer>
+</div>

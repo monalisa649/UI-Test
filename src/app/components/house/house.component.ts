@@ -23,6 +23,7 @@ export class HouseComponent implements OnInit {
         console.log(params)
         this.getHouse(params['id']);
 
+
     })
 
      }

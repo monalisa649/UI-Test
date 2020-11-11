@@ -16,6 +16,7 @@ import { CharacterInterface } from '../models/characters.interface';
 export class PotterService {
   private key: string;
   private url: string;
+
   //private characterId:string;
 
   constructor(
@@ -25,6 +26,8 @@ export class PotterService {
     this.url = environment.apiUrl;
 
   }
+  // Variable for filterpipe
+
 
   getHouses(): Observable <any> {
       return this._http.get(`${this.url}/houses/?key=${this.key}`);

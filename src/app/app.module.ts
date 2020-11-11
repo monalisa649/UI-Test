@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { from } from 'rxjs';
+
 
 //components
 import { HousesComponent } from './components/houses/houses.component';
@@ -17,10 +17,10 @@ import { PotterService } from './services/potter.service';
 
 //Pipe
 import { FilterPipe } from './pipes/filter.pipe';
-import { CharactersComponent } from './components/characters/characters.component';
+
 import { MenuComponent } from './components/menu/menu.component';
 import { HouseComponent } from './components/house/house.component';
-import { SearchComponent } from './components/search/search.component';
+
 
 
 @NgModule({
@@ -28,17 +28,16 @@ import { SearchComponent } from './components/search/search.component';
     AppComponent,
     HousesComponent,
     FilterPipe,
-    CharactersComponent,
     MenuComponent,
     HouseComponent,
-    SearchComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule 
-    
+    FormsModule
+
   ],
   providers: [PotterService],
   bootstrap: [AppComponent]

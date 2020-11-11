@@ -1,15 +1,21 @@
+<div class="wraper">
+
+  <div class="search">
+    <input type="search" name="filterCharacters" placeholder="Search..." [(ngModel)]="filterCharacters">
+  </div>
+
+  <div class= "content"  *ngFor="let house of house " >
+    <h2>House {{ house.name }} Characters </h2>
 
 
-<div class="form">
-  <div><input type="text" name="filterCharacters" placeholder="Search..." [(ngModel)]="filterCharacters">
-  <i class="fas fa-search" ></i>
-</div>
-</div>
 
-<div *ngFor="let house of house " >
-<div *ngFor="let item of house.members | filter:filterCharacters ">
-  <p>{{item.name }}</p>
-</div>
+        <div class="house" *ngFor="let item of house.members | filter:filterCharacters ">
+
+            <p>{{item.name }}</p>
 
 
+        </div>
+
+
+  </div>
 </div>
