@@ -15,13 +15,13 @@ var forms_1 = require("@angular/forms");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 //components
-var houses_component_1 = require("./components/houses/houses.component");
+var houses_component_1 = require("./pages/houses/houses.component");
 //Services
 var potter_service_1 = require("./services/potter.service");
 //Pipe
 var filter_pipe_1 = require("./pipes/filter.pipe");
 var menu_component_1 = require("./components/menu/menu.component");
-var house_component_1 = require("./components/house/house.component");
+var house_component_1 = require("./pages/house/house.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }

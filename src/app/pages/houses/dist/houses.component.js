@@ -9,18 +9,17 @@ exports.__esModule = true;
 exports.HousesComponent = void 0;
 var core_1 = require("@angular/core");
 var HousesComponent = /** @class */ (function () {
-    function HousesComponent(_potterService, route, router) {
+    function HousesComponent(_potterService, router) {
         this._potterService = _potterService;
-        this.route = route;
         this.router = router;
         // Variable for filterpipe
         this.filterCharacters = '';
         //Array of images
         this.imgHouse = [
-            "assets/img/pexels-photo.jpeg",
-            "assets/img/pexels-photo2.jpeg",
-            "assets/img/pexels-photo3.jpeg",
-            "assets/img/mont-saint.jpg"
+            'assets/img/pexels-photo.jpeg',
+            'assets/img/pexels-photo2.jpeg',
+            'assets/img/pexels-photo3.jpeg',
+            'assets/img/mont-saint.jpg',
         ];
     }
     HousesComponent.prototype.ngOnInit = function () {
@@ -32,9 +31,6 @@ var HousesComponent = /** @class */ (function () {
         this._potterService.getHouses().subscribe(function (houses) {
             _this.house = houses;
             console.log(_this.house);
-        });
-        (function (error) {
-            console.log(error);
         });
     };
     HousesComponent.prototype.verHouse = function (house) {

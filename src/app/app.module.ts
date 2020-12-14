@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 
 
 //components
-import { HousesComponent } from './components/houses/houses.component';
+import { HousesComponent } from './pages/houses/houses.component';
 
 
 //Services
@@ -19,7 +19,7 @@ import { PotterService } from './services/potter.service';
 import { FilterPipe } from './pipes/filter.pipe';
 
 import { MenuComponent } from './components/menu/menu.component';
-import { HouseComponent } from './components/house/house.component';
+import { HouseComponent } from './pages/house/house.component';
 
 
 

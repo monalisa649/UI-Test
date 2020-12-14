@@ -1,11 +1,11 @@
 <div class="wraper">
-
+  <div class= "content"  *ngFor="let house of house " >
+    <h2>House {{ house.name }} Characters </h2>
   <div class="search">
     <input type="search" name="filterCharacters" placeholder="Search..." [(ngModel)]="filterCharacters">
   </div>
 
-  <div class= "content"  *ngFor="let house of house " >
-    <h2>House {{ house.name }} Characters </h2>
+
 
 
 

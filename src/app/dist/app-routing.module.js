@@ -10,13 +10,13 @@ exports.AppRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 //Componentes
-var houses_component_1 = require("./components/houses/houses.component");
-var house_component_1 = require("./components/house/house.component");
+var houses_component_1 = require("./pages/houses/houses.component");
+var house_component_1 = require("./pages/house/house.component");
 var routes = [
     { path: '', component: houses_component_1.HousesComponent },
     { path: 'houses', component: houses_component_1.HousesComponent },
     { path: 'house/:id', component: house_component_1.HouseComponent },
-    { path: '**', component: houses_component_1.HousesComponent }
+    { path: '**', component: houses_component_1.HousesComponent },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
